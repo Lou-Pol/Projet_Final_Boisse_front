@@ -11,11 +11,25 @@ const PageDashboard: React.FC = () => {
   const user = JSON.parse(localStorage.getItem("utilisateur") || "null");
 
   useEffect(() => {
+    const token = localStorage.getItem("token");
+    if (!token) return; // ⛔ Empêche les appels tant que le token n'est pas prêt
+
     const charger = async () => {
-      setClients(await apiClients.lister());
-      setProduits(await apiProduits.lister());
-      setCommandes(await apiCommandes.lister());
+      try {
+        const [c, p, co] = await Promise.all([
+          apiClients.lister(),
+          apiProduits.lister(),
+          apiCommandes.lister(),
+        ]);
+
+        setClients(c);
+        setProduits(p);
+        setCommandes(co);
+      } catch (err) {
+        console.error("Erreur dashboard :", err);
+      }
     };
+
     charger();
   }, []);
 
