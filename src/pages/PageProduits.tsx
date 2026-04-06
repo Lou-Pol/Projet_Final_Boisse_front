@@ -1,5 +1,3 @@
-console.log("VITE_API_URL =", (import.meta as any).env.VITE_API_URL);
-
 
 import React, { useEffect, useState } from "react";
 import { apiProduits } from "../services/apiBackend";
