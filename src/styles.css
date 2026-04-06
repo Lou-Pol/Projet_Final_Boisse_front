@@ -1,0 +1,260 @@
+/* ------------------------------
+   RESET
+--------------------------------*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, Helvetica, Arial, sans-serif;
+  background: #f5f6fa;
+  color: #333;
+  line-height: 1.5;
+}
+
+/* ------------------------------
+   NAVIGATION
+--------------------------------*/
+.topbar {
+  background: #2c3e50;
+  color: white;
+  padding: 14px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 0 0 10px 10px;
+}
+
+.topbar nav {
+  display: flex;
+  gap: 24px;
+}
+
+.topbar a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: opacity 0.2s;
+}
+
+.topbar a:hover {
+  opacity: 0.7;
+}
+
+.topbar .droite {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+button.deconnexion {
+  background: #e74c3c;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  color: white;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+button.deconnexion:hover {
+  background: #c0392b;
+}
+
+/* ------------------------------
+   LAYOUT GLOBAL
+--------------------------------*/
+main {
+  padding: 32px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* ------------------------------
+   PAGE CONNEXION
+--------------------------------*/
+.page-centrer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 80vh;
+}
+
+.formulaire {
+  background: white;
+  padding: 32px;
+  border-radius: 12px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+  width: 100%;
+  max-width: 380px;
+}
+
+.formulaire h2 {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 500;
+}
+
+input,
+select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 18px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 15px;
+}
+
+button {
+  background: #3498db;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 6px;
+  color: white;
+  cursor: pointer;
+  font-size: 15px;
+  transition: 0.2s;
+}
+
+button:hover {
+  background: #2980b9;
+}
+
+button + button {
+  margin-left: 10px;
+}
+
+.erreur {
+  background: #ffdddd;
+  color: #c0392b;
+  padding: 10px;
+  border-radius: 6px;
+  margin-bottom: 12px;
+}
+
+.hint {
+  margin-top: 12px;
+  font-size: 14px;
+  color: #666;
+}
+
+/* ------------------------------
+   TABLEAUX MODERNES
+--------------------------------*/
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+thead {
+  background: #3498db;
+  color: white;
+}
+
+th, td {
+  padding: 14px 18px;
+  text-align: left;
+  border-bottom: 1px solid #eee;
+}
+
+tr:last-child td {
+  border-bottom: none;
+}
+
+tr:hover {
+  background: #f0f8ff;
+}
+
+td button {
+  margin-right: 10px;
+  margin-bottom: 6px;
+}
+
+/* ------------------------------
+   DASHBOARD CARDS
+--------------------------------*/
+.cartes {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 24px;
+  margin-top: 20px;
+}
+
+.carte {
+  background: white;
+  padding: 24px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.15s, box-shadow 0.15s;
+}
+
+.carte:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+}
+
+.carte h3 {
+  font-size: 18px;
+  margin-bottom: 8px;
+  color: #555;
+}
+
+.carte .valeur {
+  font-size: 36px;
+  font-weight: bold;
+  color: #2c3e50;
+}
+
+/* ------------------------------
+   SECTIONS COMMANDES DU CLIENT
+--------------------------------*/
+.commandes-client {
+  margin-top: 32px;
+  background: white;
+  padding: 24px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.commandes-client ul li {
+  padding: 8px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.commandes-client ul li:last-child {
+  border-bottom: none;
+}
+/* Boutons côte à côte */
+.actions {
+  display: flex;
+  gap: 10px;
+}
+
+.actions button {
+  flex: 1;
+}
+/* Boutons du formulaire de création de commande */
+.commande-actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 10px;
+}
+
+.commande-actions button {
+  flex: 1;
+}
