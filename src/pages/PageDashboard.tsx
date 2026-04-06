@@ -12,7 +12,7 @@ const PageDashboard: React.FC = () => {
 
   useEffect(() => {
     const token = localStorage.getItem("token");
-    if (!token) return; // ⛔ Empêche les appels tant que le token n'est pas prêt
+    if (!token) return; 
 
     const charger = async () => {
       try {

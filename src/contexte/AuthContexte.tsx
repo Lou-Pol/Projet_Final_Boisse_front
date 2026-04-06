@@ -5,7 +5,7 @@ import { UtilisateurConnecte } from "../types/types";
 interface AuthContexteValeur {
   utilisateur: UtilisateurConnecte | null;
   estCharge: boolean;
-  connexion: (email: string) => Promise<void>; // plus de motDePasse
+  connexion: (email: string) => Promise<void>; 
   deconnexion: () => void;
 }
 
@@ -25,7 +25,7 @@ export const AuthFournisseur: React.FC<{ children: React.ReactNode }> = ({ child
   }, []);
 
   const connexion = async (email: string) => {
-    const data = await apiAuth.login(email); // plus de motDePasse
+    const data = await apiAuth.login(email); 
     localStorage.setItem("token", data.token);
     localStorage.setItem("utilisateur", JSON.stringify(data.utilisateur));
     setUtilisateur(data.utilisateur);

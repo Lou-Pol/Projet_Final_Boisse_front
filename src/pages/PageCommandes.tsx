@@ -83,7 +83,6 @@ const PageCommandes: React.FC = () => {
     <div>
       <h1>Commandes</h1>
 
-      {/* FORMULAIRE VISIBLE UNIQUEMENT POUR USER */}
       {!estAdmin && (
         <FormulaireCommande
           clients={clients}
@@ -128,7 +127,6 @@ const PageCommandes: React.FC = () => {
                 </ul>
               </td>
 
-              {/* ACTIONS UNIQUEMENT POUR USER */}
               {!estAdmin && (
                 <td>
                   {c.statut === "EN_COURS" && (

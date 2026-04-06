@@ -36,7 +36,6 @@ const FormulaireCommande: React.FC<Props> = ({
 
       {erreur && <p className="erreur">{erreur}</p>}
 
-      {/* CLIENT */}
       <label>
         Client
         <select value={idClient} onChange={(e) => setIdClient(e.target.value)}>
@@ -49,7 +48,6 @@ const FormulaireCommande: React.FC<Props> = ({
         </select>
       </label>
 
-      {/* PRODUIT + QUANTITÉ + AJOUTER */}
       <div className="ligne-produit">
         <label>
           Produit
@@ -81,7 +79,6 @@ const FormulaireCommande: React.FC<Props> = ({
         </button>
       </div>
 
-      {/* LISTE DES LIGNES */}
       {lignes.length > 0 && (
         <ul>
           {lignes.map((l, i) => {
@@ -95,7 +92,6 @@ const FormulaireCommande: React.FC<Props> = ({
         </ul>
       )}
 
-      {/* BOUTONS ALIGNÉS */}
       <div className="commande-actions">
         <button type="submit">Créer la commande</button>
       </div>

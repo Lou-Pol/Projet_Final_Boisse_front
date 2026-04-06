@@ -85,7 +85,6 @@ const PageProduits: React.FC = () => {
     <div>
       <h1>Produits</h1>
 
-      {/* FORMULAIRE MASQUÉ POUR ADMIN */}
       {!estAdmin && (
         <form onSubmit={soumettre} className="formulaire">
           <h2>{editionId ? "Modifier un produit" : "Ajouter un produit"}</h2>
@@ -171,7 +170,6 @@ const PageProduits: React.FC = () => {
               <td>{p.stock}</td>
               <td>{p.categorie}</td>
 
-              {/* ACTIONS MASQUÉES POUR ADMIN */}
               {!estAdmin && (
                 <td>
                   <button onClick={() => commencerEdition(p)}>Modifier</button>

@@ -14,7 +14,7 @@ const PageConnexion: React.FC = () => {
     setErreur(null);
 
     try {
-      await connexion(email); // plus de mot de passe
+      await connexion(email); 
       navigate("/");
     } catch (e: any) {
       setErreur(e?.response?.data?.message ?? "Erreur de connexion");

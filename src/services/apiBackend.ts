@@ -24,6 +24,7 @@ export const apiAuth = {
   }
 };
 
+
 // CLIENTS
 export const apiClients = {
   async lister(): Promise<Client[]> {
@@ -46,6 +47,7 @@ export const apiClients = {
   }
 };
 
+
 // PRODUITS
 export const apiProduits = {
   async lister(): Promise<Produit[]> {
@@ -67,6 +69,7 @@ export const apiProduits = {
     await instance.delete(`/produits/${id}`);
   }
 };
+
 
 // COMMANDES
 export const apiCommandes = {
@@ -98,6 +101,7 @@ export const apiCommandes = {
     await instance.delete(`/commandes/${id}`);
   }
 };
+
 
 // ADMIN USERS
 export const apiAdminUsers = {
