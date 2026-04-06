@@ -1,7 +1,7 @@
 import axios from "axios";
 import { Client, Produit, Commande, UtilisateurAdmin } from "../types/types";
 
-const URL_BACKEND = "http://localhost:4000/api";
+const URL_BACKEND = (import.meta as any).env.VITE_API_URL;
 
 const instance = axios.create({
   baseURL: URL_BACKEND
